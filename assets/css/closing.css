@@ -1,0 +1,112 @@
+/* Closing brand statement: edit this file to adjust the final section. */
+.closing {
+  display: grid;
+  min-height: 92svh;
+  overflow: hidden;
+  place-items: center;
+  padding: clamp(90px, 12vw, 170px) 0;
+  text-align: center;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.025), transparent 32%),
+    radial-gradient(circle at 50% 42%, #282522 0%, #111 40%, #000 72%);
+}
+
+.closing-copy {
+  width: min(1180px, calc(100vw - 80px));
+  margin: 0 auto;
+}
+
+.closing-copy > .eyebrow {
+  margin-bottom: clamp(48px, 8vh, 86px);
+  color: #a8a8a8;
+}
+
+.heritage-message {
+  overflow: hidden;
+}
+
+.closing h2 {
+  margin: 0;
+  background: none;
+  color: #fff;
+  -webkit-text-fill-color: currentColor;
+  animation: none;
+  font-family: "Cormorant Garamond", Georgia, serif;
+  font-size: clamp(76px, 12.2vw, 182px);
+  font-style: normal;
+  font-weight: 500;
+  line-height: 0.76;
+  letter-spacing: -0.065em;
+  opacity: 1;
+  transform: none;
+}
+
+.closing h2 span,
+.closing h2 em {
+  display: block;
+  color: #fff;
+  -webkit-text-fill-color: currentColor;
+  font-family: inherit;
+  font-style: normal;
+  opacity: 0;
+  clip-path: inset(0 100% 0 0);
+  transform: translateX(-42px);
+  transition:
+    opacity 0.85s linear,
+    clip-path 2s linear,
+    transform 1.65s ease-out;
+  will-change: clip-path, transform, opacity;
+}
+
+.closing h2 em {
+  margin-top: 0.16em;
+  color: var(--cream);
+  font-style: italic;
+  transition-delay: 0.28s;
+}
+
+.heritage-message > p {
+  margin: clamp(36px, 6vh, 64px) 0 0;
+  color: #b9b9b9;
+  font-size: clamp(13px, 1.1vw, 16px);
+  letter-spacing: 0.02em;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.45s 0.18s,
+    transform 0.5s 0.18s var(--ease);
+}
+
+.closing-copy.is-counted h2 span,
+.closing-copy.is-counted h2 em,
+.closing-copy.is-counted .heritage-message > p {
+  opacity: 1;
+  clip-path: inset(0 0 0 0);
+  transform: none;
+}
+
+@media (max-width: 600px) {
+  .closing {
+    min-height: 82svh;
+    padding: 90px 0;
+  }
+
+  .closing-copy {
+    width: calc(100vw - 40px);
+  }
+
+  .closing h2 {
+    font-size: clamp(64px, 23vw, 104px);
+    line-height: 0.8;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .closing h2 span,
+  .closing h2 em,
+  .heritage-message > p {
+    opacity: 1;
+    clip-path: none;
+    transform: none;
+  }
+}

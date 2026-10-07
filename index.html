@@ -1,594 +1,611 @@
 <!doctype html>
-<html lang="en">
+<!--
+  SIMMONS Portfolio — index.html
+  Sections: Header → Hero → Promotions → Intro → Find rest → Collections
+            → Journal → Stores → Closing → Popup / Quick menu → Footer
+-->
+<html lang="ko">
   <head>
-    <meta charset="utf-8" />
-    <meta content="width=device-width,initial-scale=1" name="viewport" />
-    <meta content="#090909" name="theme-color" />
-    <title>Marshall — Home Concept / Final Checked V05</title>
-    <link href="https://fonts.googleapis.com" rel="preconnect" />
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="깊은 밤을 위한 새로운 기준, SIMMONS 리뉴얼 포트폴리오"
+    />
+    <title>SIMMONS — A Better Night</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&amp;family=Instrument+Serif:ital@0;1&amp;family=Inter+Tight:wght@400;450;500;550;600;650&amp;display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;1,500&family=Inter:wght@400;500;600&family=Noto+Sans+KR:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
-    <link href="assets/css/styles.css" rel="stylesheet" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,500;1,600&amp;display=swap"
-      rel="stylesheet"
-    />
+    <link rel="stylesheet" href="assets/css/styles.css" />
+    <link rel="stylesheet" href="assets/css/closing.css" />
+    <link rel="stylesheet" href="assets/css/components.css" />
+    <script src="assets/js/main.js?v=20261007-1" defer></script>
   </head>
-  <body id="top">
-    <header class="header">
-      <div class="utility">
-        <a data-demo="Business solutions" href="#">Business solutions</a
-        ><a data-demo="Membership" href="#">Membership</a
-        ><a data-demo="Find a retailer" href="#">Find a retailer</a
-        ><a data-demo="Outlet" href="#">Outlet</a
-        ><a data-demo="Support" href="#">Support</a>
-      </div>
-      <div class="header-main">
-        <a aria-label="Marshall home" class="logo" href="#top">Marshall</a>
-        <nav aria-label="Primary navigation" class="nav">
-          <button aria-expanded="false" data-nav="amps" type="button">
-            AMPS</button
-          ><button aria-expanded="false" data-nav="speakers" type="button">
-            SPEAKERS</button
-          ><button aria-expanded="false" data-nav="headphones" type="button">
-            HEADPHONES</button
-          ><button aria-expanded="false" data-nav="backstage" type="button">
-            BACKSTAGE</button
-          ><button aria-expanded="false" data-nav="records" type="button">
-            RECORDS
-          </button>
+  <body>
+    <a class="skip-link" href="#main">본문 바로가기</a>
+
+    <!-- Site header -->
+    <header class="site-header" data-header>
+      <div class="utility-bar">
+        <nav aria-label="유틸리티 메뉴">
+          <a href="#">매장 안내</a>
+          <a href="#">팩토리움 투어 예약</a>
+          <a href="#">회원가입</a>
+          <a href="#">로그인</a>
+          <a href="#">고객센터</a>
         </nav>
-        <div class="icons">
-          <button aria-label="Search" class="icon" data-search="" type="button">
-            <svg viewbox="0 0 24 24">
-              <circle cx="10.5" cy="10.5" r="5.5"></circle>
-              <path d="m15 15 4.5 4.5"></path>
-            </svg></button
-          ><button
-            aria-label="Region and language"
-            class="icon"
-            data-demo="Language selection"
-            type="button"
-          >
-            <svg viewbox="0 0 24 24">
-              <circle cx="12" cy="12" r="8"></circle>
-              <path d="M4 12h16M12 4c4 5 4 11 0 16M12 4c-4 5-4 11 0 16"></path>
-            </svg></button
-          ><button
-            aria-label="Account"
-            class="icon"
-            data-demo="Account"
-            type="button"
-          >
-            <svg viewbox="0 0 24 24">
-              <circle cx="12" cy="8" r="3"></circle>
-              <path d="M5 20c1-4 3-6 7-6s6 2 7 6"></path>
-            </svg></button
-          ><button
-            aria-label="Shopping bag"
-            class="icon"
-            data-demo="Shopping bag"
-            type="button"
-          >
-            <svg viewbox="0 0 24 24">
-              <path d="M6 8h12l1 12H5L6 8Z"></path>
-              <path d="M9 9V7a3 3 0 0 1 6 0v2"></path>
-            </svg></button
-          ><button
-            aria-label="Open navigation"
-            class="icon hamb"
-            data-mobile-open=""
-            type="button"
-          >
-            <svg viewbox="0 0 24 24">
-              <path d="M3 6h18M3 12h18M3 18h18"></path>
-            </svg>
-          </button>
+      </div>
+      <div class="nav-bar">
+        <button
+          class="menu-button"
+          type="button"
+          aria-label="전체 메뉴 열기"
+          aria-expanded="false"
+          aria-controls="mobile-menu"
+          data-menu-button
+        >
+          <span></span><span></span>
+        </button>
+        <a class="brand" href="#" aria-label="시몬스 홈"
+          ><img src="assets/images/simmons/logo.png" alt="SIMMONS"
+        /></a>
+        <nav class="primary-nav" aria-label="주요 메뉴">
+          <a href="#">브랜드 소개</a>
+          <a href="#">모든 제품 보기</a>
+          <a href="#">뷰티레스트 블랙</a>
+          <a href="#">뷰티레스트 매트리스</a>
+          <a href="#">침대 세트</a>
+          <a href="#">프레임/가구</a>
+          <a href="#">침구/리빙</a>
+          <a href="#">펫 매트리스</a>
+          <a href="#">아울렛</a>
+        </nav>
+        <div class="nav-actions">
+          <a href="#" aria-label="검색"
+            ><svg aria-hidden="true" viewBox="0 0 24 24">
+              <circle cx="10.5" cy="10.5" r="6.5" />
+              <path d="m15.5 15.5 5 5" /></svg
+          ></a>
+          <a href="#" aria-label="장바구니"
+            ><svg aria-hidden="true" viewBox="0 0 24 24">
+              <path d="M5 8h14l-1 13H6L5 8Z" />
+              <path d="M9 9V6a3 3 0 0 1 6 0v3" /></svg
+          ></a>
         </div>
       </div>
-    </header>
-    <div class="menu-backdrop" data-scrim=""></div>
-    <div class="mega" data-mega="amps">
-      <div>
-        <h3>Amps</h3>
-        <a href="#worlds">All amps</a><a href="#worlds">Live</a
-        ><a href="#worlds">Studio</a>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="#live">Our heritage</a>
-      </div>
-      <img
-        alt="Amplifier heritage"
-        src="assets/images/nav-amplifier-heritage.webp"
-      />
-    </div>
-    <div class="mega" data-mega="speakers">
-      <div>
-        <h3>Speakers</h3>
-        <a href="#lineup">All speakers</a><a href="#featured">Home speakers</a
-        ><a href="#lineup">Portable speakers</a><a href="#lineup">TV sound</a>
-      </div>
-      <div>
-        <h3>Featured</h3>
-        <a href="#featured">Stanmore IV</a><a href="#lineup">Product lineup</a>
-      </div>
-      <img alt="Stanmore IV" src="assets/images/nav-stanmore-iv.webp" />
-    </div>
-    <div class="mega" data-mega="headphones">
-      <div>
-        <h3>Headphones</h3>
-        <a href="#worlds">All headphones</a><a href="#worlds">On-ear</a
-        ><a href="#worlds">Over-ear</a><a href="#worlds">Earbuds</a>
-      </div>
-      <div>
-        <h3>Discover</h3>
-        <a href="#worlds">Personal audio</a>
-      </div>
-      <img alt="Marshall headphones" src="assets/images/nav-headphones.webp" />
-    </div>
-    <div class="mega" data-mega="backstage">
-      <div>
-        <h3>Backstage</h3>
-        <a href="#live">Live music</a><a href="#live">Heritage</a
-        ><a href="#live">Stories</a>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="#live">1962 — now</a>
-      </div>
-      <img
-        alt="Marshall amplifier on stage"
-        src="assets/images/nav-amplifier-heritage.webp"
-      />
-    </div>
-    <div class="mega" data-mega="records">
-      <div>
-        <h3>Marshall Records</h3>
-        <a href="#live">Artists</a><a href="#live">Releases</a>
-      </div>
-      <div>
-        <h3>Explore</h3>
-        <a href="#live">Live music</a>
-      </div>
-      <img
-        alt="Marshall music culture"
-        src="assets/images/nav-music-culture.webp"
-      />
-    </div>
-    <aside aria-label="Mobile menu" class="mobile-drawer" data-mobile="">
-      <button aria-label="Close menu" data-mobile-close="">×</button>
-      <details>
-        <summary>Amps</summary>
-        <a href="#worlds">All amps</a><a href="#live">Heritage</a>
-      </details>
-      <details>
-        <summary>Speakers</summary>
-        <a href="#lineup">All speakers</a><a href="#featured">Stanmore IV</a
-        ><a href="#lineup">Portable</a>
-      </details>
-      <details>
-        <summary>Headphones</summary>
-        <a href="#worlds">All headphones</a><a href="#worlds">Over-ear</a>
-      </details>
-      <details>
-        <summary>Backstage</summary>
-        <a href="#live">Live music</a><a href="#live">Our story</a>
-      </details>
-      <details>
-        <summary>Records</summary>
-        <a href="#live">Artists</a>
-      </details>
-      <div class="mobile-util">
-        <a data-demo="Business solutions" href="#">Business solutions</a
-        ><a data-demo="Membership" href="#">Membership</a
-        ><a data-demo="Find a retailer" href="#">Find a retailer</a
-        ><a data-demo="Outlet" href="#">Outlet</a
-        ><a data-demo="Support" href="#">Support</a>
-      </div>
-    </aside>
-    <main>
-      <section class="hero" id="hero">
-        <div class="hero-copy">
-          <span class="eyebrow">STANMORE IV / HOME SPEAKERS</span>
-          <h1>ROOM-FILLING<br /><em>SOUND.</em></h1>
-          <p class="lede">Wide soundstage. Enhanced bass. Built for home.</p>
-          <a class="stroke-button" href="#featured">Shop now <i>↗</i></a>
-        </div>
-        <div class="hero-visual">
-          <img
-            alt="Cream Stanmore IV photographed at a high angle"
-            src="assets/images/hero-stanmore-iv-cream.webp"
-          />
-        </div>
-      </section>
-      <section class="worlds worlds-editorial" id="worlds">
-        <div class="shell">
-          <div class="worlds-heading reveal">
-            <div>
-              <span class="eyebrow">EXPLORE THE RANGE</span>
-              <h2>Find your sound.</h2>
-            </div>
-          </div>
-          <div class="worlds-editorial-grid">
-            <a
-              class="worlds-editorial-card worlds-editorial-card--large reveal"
-              href="#lineup"
-              ><img
-                alt="Marshall speaker in a music-filled home"
-                src="assets/images/category-home-speakers.webp"
-              /><span class="worlds-editorial-caption"
-                ><small>HOME &amp; PORTABLE</small><strong>Speakers</strong
-                ><i>↗</i></span
-              ></a
-            >
-            <a
-              class="worlds-editorial-card worlds-editorial-card--small reveal"
-              href="#lineup"
-              ><img
-                alt="Marshall headphones in a lifestyle setting"
-                src="assets/images/category-headphones.webp"
-              /><span class="worlds-editorial-caption"
-                ><small>PERSONAL AUDIO</small><strong>Headphones</strong
-                ><i>↗</i></span
-              ></a
-            >
-          </div>
-        </div>
-      </section>
-      <section class="feature-focus" data-feature-focus="" id="featured">
-        <div class="feature-focus-sticky">
-          <div class="feature-focus-head shell">
-            <span class="eyebrow">STANMORE IV / THE SOUND</span>
-            <h2>STANMORE IV</h2>
-            <span class="feature-focus-counter"
-              ><b data-focus-current="">01</b> / 03</span
-            >
-          </div>
-          <div class="feature-focus-stage shell">
-            <nav
-              aria-label="Stanmore IV feature chapters"
-              class="feature-focus-nav"
-            >
-              <button class="active" data-focus-nav="0" type="button">
-                <span>01</span><b>Wide soundstage</b>
-              </button>
-              <button data-focus-nav="1" type="button">
-                <span>02</span><b>Tactile control</b>
-              </button>
-              <button data-focus-nav="2" type="button">
-                <span>03</span><b>Enhanced bass</b>
-              </button>
-            </nav>
-            <div class="feature-focus-visual">
-              <figure class="focus-frame active" data-focus-frame="0">
-                <img
-                  alt="Cream Stanmore IV speaker"
-                  src="assets/images/feature-stanmore-wide-soundstage.webp"
-                /><span class="focus-ghost">WIDE</span
-                ><span class="focus-corner">01 / STANMORE IV</span>
-              </figure>
-              <figure
-                class="focus-frame focus-frame--photo"
-                data-focus-frame="1"
-              >
-                <img
-                  alt="Hand adjusting a cream Marshall home speaker"
-                  src="assets/images/feature-stanmore-tactile-control.webp"
-                /><span class="focus-ghost">TOUCH</span
-                ><span class="focus-corner">02 / STANMORE IV</span>
-              </figure>
-              <figure class="focus-frame" data-focus-frame="2">
-                <img
-                  alt="Black Stanmore IV speaker"
-                  src="assets/images/feature-stanmore-enhanced-bass.webp"
-                /><span class="focus-ghost">BASS</span
-                ><span class="focus-corner">03 / STANMORE IV</span>
-              </figure>
-            </div>
-            <div class="feature-focus-copy">
-              <article class="active" data-focus-copy="0">
-                <small>01 / WIDE SOUNDSTAGE</small>
-                <h3>More room<br />for the music.</h3>
-                <p>
-                  Upgraded tweeters and waveguides spread detail wider
-                  throughout the room.
-                </p>
-              </article>
-              <article data-focus-copy="1">
-                <small>02 / TACTILE CONTROL</small>
-                <h3>Turn it.<br />Feel it.</h3>
-                <p>
-                  Volume, bass and treble stay physical with amplifier-inspired
-                  controls.
-                </p>
-              </article>
-              <article data-focus-copy="2">
-                <small>03 / ENHANCED BASS</small>
-                <h3>Deeper.<br />Cleaner.</h3>
-                <p>
-                  A redesigned bass port adds weight and control without
-                  overpowering the room.
-                </p>
-              </article>
-            </div>
-          </div>
-        </div>
-      </section>
-      <section class="lineup lineup-clean lineup-v10" id="lineup">
-        <div class="shell">
-          <div class="lineup-top reveal">
-            <div>
-              <span class="eyebrow">THE LINE-UP</span>
-              <h2>Explore the line-up.</h2>
-            </div>
-            <div class="rail-controls">
-              <button
-                aria-label="Previous products"
-                data-rail-prev=""
-                type="button"
-              >
-                ←
-              </button>
-              <button
-                aria-label="Next products"
-                data-rail-next=""
-                type="button"
-              >
-                →
-              </button>
-            </div>
-          </div>
-          <div aria-label="Marshall product line-up" class="rail" data-rail="">
-            <a class="rail-item" data-kind="home" href="#">
-              <div class="rail-image">
-                <img alt="Acton IV" src="assets/images/product-acton-iv.webp" />
-              </div>
-              <div class="rail-info">
-                <h3>Acton IV</h3>
-                <b>₩470,000</b>
-              </div>
-            </a>
-            <a class="rail-item" data-kind="home" href="#">
-              <div class="rail-image">
-                <img
-                  alt="Stanmore IV"
-                src="assets/images/nav-stanmore-iv.webp"
-                />
-              </div>
-              <div class="rail-info">
-                <h3>Stanmore IV</h3>
-                <b>₩640,000</b>
-              </div>
-            </a>
-            <a class="rail-item" data-kind="home" href="#">
-              <div class="rail-image">
-                <img
-                  alt="Woburn III"
-                  src="assets/images/product-woburn-iii.webp"
-                />
-              </div>
-              <div class="rail-info">
-                <h3>Woburn III</h3>
-                <b>₩950,000</b>
-              </div>
-            </a>
-            <a class="rail-item" data-kind="home" href="#">
-              <div class="rail-image">
-                <img
-                  alt="Stanmore IV Cream"
-                  src="assets/images/product-stanmore-iv-cream.webp"
-                />
-              </div>
-              <div class="rail-info">
-                <h3>Stanmore IV Cream</h3>
-                <b>₩640,000</b>
-              </div>
-            </a>
-          </div>
-        </div>
-      </section>
-      <section class="lives lives-ref8 lives-v10" id="editorial">
-        <div class="shell lives-head reveal">
-          <h2>Sound lives here.</h2>
-          <div class="lives-controls">
-            <button
-              aria-label="Previous story"
-              data-lives-prev=""
-              type="button"
-            >
-              ←
-            </button>
-            <button aria-label="Next story" data-lives-next="" type="button">
-              →
-            </button>
-          </div>
-        </div>
-        <div class="lives-window">
-          <div
-            aria-label="Drag or swipe to browse Marshall lifestyle stories"
-            class="lives-track"
-            data-lives-track=""
-          >
-            <a class="lives-card" href="#live"
-              ><img
-                alt="Marshall speaker in an everyday room"
-                src="assets/images/editorial-everyday-room.webp"
-              /><span
-                ><small>AT HOME</small><strong>Sound, lived in.</strong></span
-              ></a
-            >
-            <a class="lives-card lives-card--hero" href="#live"
-              ><img
-                alt="Marshall speaker in a lifestyle scene"
-                src="assets/images/editorial-lifestyle-speaker.webp"
-              /><span
-                ><small>EVERYDAY LISTENING</small
-                ><strong>Make room for music.</strong></span
-              ></a
-            >
-            <a class="lives-card" href="#live"
-              ><img
-                alt="Marshall headphones in a lifestyle setting"
-                src="assets/images/editorial-headphones.webp"
-              /><span
-                ><small>ON THE MOVE</small
-                ><strong>Take the sound with you.</strong></span
-              ></a
-            >
-            <a class="lives-card" href="#live"
-              ><img
-                alt="Marshall speaker at home"
-              src="assets/images/feature-stanmore-tactile-control.webp"
-              /><span
-                ><small>AT HOME</small
-                ><strong>Built into the room.</strong></span
-              ></a
-            >
-            <a class="lives-card lives-card--hero" href="#live"
-              ><img
-                alt="Marshall amplifier and musician"
-                src="assets/images/editorial-live-amplifier.webp"
-              /><span
-                ><small>LIVE</small
-                ><strong>Where it all gets louder.</strong></span
-              ></a
-            >
-            <a class="lives-card" href="#live"
-              ><img
-                alt="Marshall product lifestyle photography"
-                src="assets/images/editorial-product-lifestyle.webp"
-              /><span
-                ><small>THE LINE-UP</small
-                ><strong>Different rooms. Same attitude.</strong></span
-              ></a
-            >
-            <a class="lives-card" href="#live"
-              ><img
-                alt="Marshall headphones lifestyle repeat"
-              src="assets/images/editorial-headphones.webp"
-              /><span
-                ><small>PERSONAL AUDIO</small
-                ><strong>Keep it close.</strong></span
-              ></a
-            >
-          </div>
-        </div>
-      </section>
-      <section
-        class="sound sound-v4-refined sound-v10"
-        data-sound=""
-        id="sound"
+      <nav
+        class="mobile-menu"
+        id="mobile-menu"
+        aria-label="모바일 메뉴"
+        data-mobile-menu
       >
-        <div class="sound-sticky">
-          <div class="sound-heading">
-            <span class="eyebrow">SOUND / TECHNOLOGY</span>
-            <h2>SOUND MOVES<br /><em>AROUND YOU.</em></h2>
+        <p>브랜드 소개</p>
+        <a href="#">뷰티레스트 / 블랙</a>
+        <a href="#">히스토리</a>
+        <a href="#">팩토리움</a>
+        <p>제품</p>
+        <a href="#">모든 제품 보기</a>
+        <a href="#">뷰티레스트 블랙</a>
+        <a href="#">뷰티레스트 매트리스</a>
+        <a href="#">침대 세트</a>
+        <a href="#">프레임/가구</a>
+        <a href="#">침구/리빙</a>
+        <a href="#">펫 매트리스</a>
+        <a href="#">아울렛</a>
+        <a href="#">매장 안내</a>
+        <a href="#">팩토리움 투어 예약</a>
+      </nav>
+    </header>
+
+    <!-- Main content -->
+    <main id="main">
+      <!-- Hero carousel -->
+      <section class="hero" id="top" aria-labelledby="hero-title">
+        <div class="hero-slider" data-hero-slider>
+          <article class="hero-slide is-active" data-hero-slide>
+            <img
+              src="assets/images/simmons/find-frame.png"
+              alt="시몬스 침대가 놓인 침실"
+            />
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+              <p class="eyebrow">SIMMONS NEW COLLECTION</p>
+              <h1 id="hero-title">
+                <span>A better night,</span><br />a better day.
+              </h1>
+              <a class="text-link" href="#">컬렉션 살펴보기 <span>↗</span></a>
+            </div>
+          </article>
+          <article class="hero-slide" data-hero-slide aria-hidden="true">
+            <img
+              src="assets/images/simmons/hero-b3.png"
+              alt="시몬스 B3 침대 컬렉션"
+            />
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+              <p class="eyebrow">BEAUTYREST COLLECTION</p>
+              <h2><span>Quiet comfort,</span><br />made for you.</h2>
+              <a class="text-link" href="#" tabindex="-1"
+                >제품 만나보기 <span>↗</span></a
+              >
+            </div>
+          </article>
+          <article class="hero-slide" data-hero-slide aria-hidden="true">
+            <img
+              src="assets/images/simmons/hero-kina.png"
+              alt="시몬스 키나 침대 컬렉션"
+            />
+            <div class="hero-shade"></div>
+            <div class="hero-copy">
+              <p class="eyebrow">YOUR BEDROOM, YOUR WAY</p>
+              <h2><span>Rest in</span><br />your own rhythm.</h2>
+              <a class="text-link" href="#" tabindex="-1"
+                >프레임 살펴보기 <span>↗</span></a
+              >
+            </div>
+          </article>
+        </div>
+        <div class="hero-navigation">
+          <button type="button" data-hero-prev aria-label="이전 배너">←</button>
+          <div class="hero-dots" role="tablist" aria-label="메인 배너">
+            <button
+              type="button"
+              class="is-active"
+              data-hero-dot
+              aria-label="첫 번째 배너"
+            ></button
+            ><button
+              type="button"
+              data-hero-dot
+              aria-label="두 번째 배너"
+            ></button
+            ><button
+              type="button"
+              data-hero-dot
+              aria-label="세 번째 배너"
+            ></button>
+          </div>
+          <button type="button" data-hero-next aria-label="다음 배너">→</button>
+        </div>
+      </section>
+
+      <section
+        class="promotions section-pad"
+        aria-labelledby="promotions-title"
+      >
+        <div class="promotions-head reveal">
+          <div>
+            <p class="eyebrow">NOW AT SIMMONS</p>
+            <h2 id="promotions-title">새로운 밤을 만나보세요</h2>
+          </div>
+        </div>
+        <div class="promotion-grid">
+          <a class="promotion-card promotion-card-new reveal" href="#">
+            <img
+              src="assets/images/simmons/hero-b3.png"
+              alt="시몬스 뷰티레스트 신제품 컬렉션"
+              loading="lazy"
+            />
+            <span class="promotion-shade"></span>
+            <span class="promotion-badge">NEW ARRIVAL</span>
+            <span class="promotion-copy">
+              <small>BEAUTYREST NEW COLLECTION</small>
+              <strong>더 깊어진 편안함,<br />새로운 컬렉션</strong>
+              <span>신제품 만나보기 <i>↗</i></span>
+            </span>
+          </a>
+          <a class="promotion-card promotion-card-online reveal" href="#">
+            <img
+              src="assets/images/simmons/online.jpg"
+              alt="시몬스 온라인 전용 제품"
+              loading="lazy"
+            />
+            <span class="promotion-shade"></span>
+            <span class="promotion-badge">SPECIAL OFFER</span>
+            <span class="promotion-copy">
+              <small>ONLINE ONLY</small>
+              <strong>오직 온라인에서만,<br />특별한 혜택</strong>
+              <span>혜택 확인하기 <i>↗</i></span>
+            </span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Good-sleep standards -->
+      <section
+        class="intro section-pad"
+        id="intro"
+        aria-labelledby="intro-title"
+      >
+        <div class="intro-head reveal">
+          <div>
+            <p class="eyebrow">THE ART OF GOOD SLEEP</p>
+            <h2 id="intro-title">좋은 밤을 만드는<br />세 가지 기준</h2>
+          </div>
+          <a class="pill-link" href="#">Why Simmons <span>→</span></a>
+        </div>
+        <div class="intro-experience reveal" data-intro-experience>
+          <img
+            src="assets/images/simmons/intro-terrace.png"
+            alt="시몬스 테라스 공간"
+          />
+          <span class="intro-shade"></span>
+          <article class="intro-panel is-active" tabindex="0">
+            <div>
+              <small>COMFORT</small>
+              <h3>흔들리지 않는<br />편안함</h3>
+              <p>
+                각자의 움직임을 독립적으로 흡수하는 시몬스의 포켓스프링 기술.
+              </p>
+            </div>
+          </article>
+          <article class="intro-panel" tabindex="0">
+            <div>
+              <small>RESEARCH</small>
+              <h3>250가지<br />수면 실험</h3>
+              <p>41개 테스트 기기와 챔버에서 더 나은 수면 환경을 연구합니다.</p>
+            </div>
+          </article>
+          <article class="intro-panel" tabindex="0">
+            <div>
+              <small>LAYERING</small>
+              <h3>50여 종<br />내장재의 조합</h3>
+              <p>
+                밀도와 촉감이 다른 소재를 조합해 최적의 수면 느낌을 완성합니다.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- Product categories -->
+      <section class="find-rest" id="find-rest" aria-labelledby="find-title">
+        <div class="section-heading reveal">
+          <p class="eyebrow">EXPLORE YOUR WAY</p>
+          <h2 id="find-title">나에게 맞는 휴식 찾기</h2>
+          <p>나의 밤을 완성하는 두 가지 방식.</p>
+        </div>
+        <div class="category-grid">
+          <a class="category-card reveal" href="#">
+            <img
+              src="assets/images/simmons/find-mattress.png"
+              alt="시몬스 B1 매트리스"
+              loading="lazy"
+            />
+            <span class="card-shade"></span><span class="card-no">01</span>
+            <span class="category-copy"
+              ><small>MATTRESS</small><strong>Beautyrest</strong
+              ><span>나에게 맞는 매트리스 찾기 ↗</span></span
+            >
+          </a>
+          <a class="category-card reveal" href="#">
+            <img
+              src="assets/images/simmons/find-frame.png"
+              alt="시몬스 루티안 침대 프레임"
+              loading="lazy"
+            />
+            <span class="card-shade"></span><span class="card-no">02</span>
+            <span class="category-copy"
+              ><small>BEDROOM</small><strong>Frames</strong
+              ><span>공간을 완성하는 프레임 ↗</span></span
+            >
+          </a>
+        </div>
+      </section>
+
+      <!-- Signature collection -->
+      <section
+        class="collections section-pad"
+        id="collections"
+        aria-labelledby="collection-title"
+      >
+        <div class="collection-head reveal">
+          <div>
+            <h2 id="collection-title">더 깊은 잠을 위한 기술</h2>
             <p>
-              Wide soundstage, controlled bass and balanced output — engineered
-              to fill more of the room.
+              몸의 곡선을 섬세하게 지지하고 움직임은 조용히 흡수합니다. 시몬스의
+              독자적인 기술이 만드는 차이를 직접 경험해 보세요.
             </p>
           </div>
-          <div class="sound-visual">
-            <div aria-hidden="true" class="rings">
-              <i></i><i></i><i></i><i></i><i></i><i></i>
-            </div>
-            <figure class="sound-object">
+        </div>
+        <section
+          class="collection-stage reveal"
+          data-collection
+          tabindex="0"
+          aria-roledescription="carousel"
+          aria-label="시몬스 컬렉션 슬라이드"
+        >
+          <article class="collection-slide is-active" data-slide>
+            <div class="collection-visual">
               <img
-                alt="Stanmore IV cutout"
-                src="assets/images/sound-stanmore-iv-cutout.webp"
+                src="assets/images/simmons/product-black.png"
+                alt="뷰티레스트 블랙 매트리스 디테일"
+                loading="lazy"
               />
-            </figure>
-            <div class="sound-tag sound-tag--one">
-              <b>360°</b><small>ROOM-FILLING PRESENCE</small>
             </div>
-            <div class="sound-tag sound-tag--two">
-              <b>36–38kHz</b><small>FREQUENCY RANGE</small>
+            <div class="collection-info">
+              <p>01 / PREMIUM</p>
+              <h3>Beautyrest Black</h3>
+              <span>최상의 소재와 기술이 완성한 깊은 편안함</span
+              ><a href="#">컬렉션 보기 ↗</a>
             </div>
-            <div class="sound-tag sound-tag--three">
-              <b>97 dB</b><small>SPL @ 1M</small>
+          </article>
+          <article class="collection-slide" data-slide>
+            <div class="collection-visual detail">
+              <img
+                src="assets/images/simmons/product-black-detail.png"
+                alt="뷰티레스트 블랙 내부 구조"
+                loading="lazy"
+              />
             </div>
-            <span class="sound-scroll-label">SCROLL / SPATIAL SOUND</span>
+            <div class="collection-info">
+              <p>02 / SIGNATURE</p>
+              <h3>Beautyrest</h3>
+              <span>흔들림을 줄이고 편안함을 오래 유지하는 기준</span
+              ><a href="#">컬렉션 보기 ↗</a>
+            </div>
+          </article>
+          <div class="collection-controls">
+            <button type="button" data-prev aria-label="이전 컬렉션">←</button
+            ><span data-counter>01 / 02</span
+            ><button type="button" data-next aria-label="다음 컬렉션">→</button>
           </div>
+        </section>
+      </section>
+
+      <!-- Brand archive -->
+      <section
+        class="journal section-pad"
+        id="journal"
+        aria-labelledby="journal-title"
+      >
+        <div class="section-heading align-left reveal">
+          <p class="eyebrow">BRAND ARCHIVE</p>
+          <h2 id="journal-title">잠과 문화,<br />그 사이의 모든 것</h2>
+          <p>
+            시몬스 공식 브랜드 스토리에 담긴 팩토리움, 테라스, 헤리티지를 비주얼
+            아카이브로 재구성했습니다.
+          </p>
+        </div>
+        <div class="journal-grid">
+          <article class="journal-card journal-main reveal">
+            <img
+              src="assets/images/simmons/terrace-01.png"
+              alt="시몬스 테라스 공간"
+              loading="lazy"
+            />
+            <div>
+              <small>SPACE / ICHEON</small>
+              <h3>Simmons Terrace</h3>
+              <p>침대와 문화를 새롭게 경험하는 복합문화공간</p>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <img
+              src="assets/images/simmons/lab.png"
+              alt="시몬스 팩토리움 연구 공간"
+              loading="lazy"
+            />
+            <div>
+              <small>TECH / FACTORIUM</small>
+              <h3>A better way to sleep</h3>
+            </div>
+          </article>
+          <article class="journal-card reveal">
+            <img
+              src="assets/images/simmons/heritage.png"
+              alt="시몬스 헤리티지 전시 공간"
+              loading="lazy"
+            />
+            <div>
+              <small>HERITAGE / 1870</small>
+              <h3>Built on a good night</h3>
+            </div>
+          </article>
         </div>
       </section>
-      <section class="live" id="live">
-        <div class="live-sticky">
-          <img
-            alt="Musician adjusting a blue Marshall amplifier in a studio"
-            class="live-photo"
-            src="assets/images/heritage-musician-amplifier.webp"
-          />
-          <div class="live-veil"></div>
-          <div class="live-body">
-            <span class="eyebrow">LIVE / HERITAGE — EST. 1962</span>
-            <div class="live-lines">
-              <div class="live-line">
-                <span data-live-line="">Live is where it started.</span>
-              </div>
-              <div class="live-line">
-                <span data-live-line="">From the stage to your space.</span>
-              </div>
-              <div class="live-line">
-                <span data-live-line="">Still making noise.</span>
-              </div>
-            </div>
-            <a class="live-link" href="#editorial"
-              >Explore the stories <i>↗</i></a
+
+      <!-- Store carousel -->
+      <section
+        class="stores section-pad"
+        id="stores"
+        aria-labelledby="stores-title"
+      >
+        <div class="stores-head reveal">
+          <div>
+            <p class="eyebrow">VISIT SIMMONS</p>
+            <h2 id="stores-title">가까운 곳에서<br />직접 경험하세요</h2>
+          </div>
+          <a class="text-link" href="#">전국 매장 찾기 <span>↗</span></a>
+        </div>
+        <section
+          class="store-gallery"
+          data-store-gallery
+          tabindex="0"
+          aria-roledescription="carousel"
+          aria-label="시몬스 매장 슬라이드"
+        >
+          <article class="store-card reveal">
+            <a
+              class="store-visual"
+              href="#"
+              aria-label="시몬스 테라스 자세히 보기"
             >
+              <img
+                src="assets/images/simmons/terrace-02.png"
+                alt="시몬스 테라스 외관"
+                loading="lazy"
+              /><span>01</span>
+            </a>
+            <small>ICHEON</small>
+            <h3>시몬스 테라스</h3>
+            <p>브랜드의 역사와 기술, 라이프스타일을 만나는 공간</p>
+            <a href="#">자세히 보기 ↗</a>
+          </article>
+          <article class="store-card reveal">
+            <a
+              class="store-visual"
+              href="#"
+              aria-label="시몬스 갤러리 매장 찾기"
+            >
+              <img
+                src="assets/images/simmons/online.jpg"
+                alt="시몬스 침실 컬렉션"
+                loading="lazy"
+              /><span>02</span>
+            </a>
+            <small>FLAGSHIP</small>
+            <h3>시몬스 갤러리</h3>
+            <p>전문 슬립마스터와 함께 나에게 맞는 침대를 찾는 곳</p>
+            <a href="#">매장 찾기 ↗</a>
+          </article>
+          <article class="store-card reveal">
+            <a class="store-visual" href="#" aria-label="시몬스 맨션 매장 찾기">
+              <img
+                src="assets/images/simmons/find-mattress.png"
+                alt="시몬스 매트리스 컬렉션"
+                loading="lazy"
+              /><span>03</span>
+            </a>
+            <small>LOCAL</small>
+            <h3>시몬스 맨션</h3>
+            <p>지역의 취향과 시몬스의 큐레이션이 만나는 공간</p>
+            <a href="#">매장 찾기 ↗</a>
+          </article>
+        </section>
+      </section>
+
+      <!-- Closing brand statement -->
+      <section class="closing" id="heritage" aria-label="브랜드 메시지">
+        <div class="closing-copy" data-closing-section>
+          <p class="eyebrow">SIMMONS / SINCE 1870</p>
+          <div class="heritage-message">
+            <h2><span>Good nights.</span><em>Better days.</em></h2>
+            <p>좋은 밤이 더 나은 하루를 만듭니다.</p>
           </div>
         </div>
       </section>
     </main>
-    <footer class="footer footer-v10">
-      <div class="footer-v10-top shell">
-        <div class="footer-v10-col">
-          <b>Corporate</b>
-          <a href="#">About Marshall</a>
-          <a href="#">Marshall Group</a>
-          <a href="#">Sustainability</a>
-          <a href="#">Careers</a>
-          <a href="#live">Live &amp; heritage</a>
+
+    <!-- Event popup -->
+    <aside
+      class="event-popup"
+      data-event-popup
+      role="dialog"
+      aria-modal="false"
+      aria-label="이벤트 안내"
+    >
+      <button
+        class="popup-close"
+        type="button"
+        data-popup-close
+        aria-label="팝업 닫기"
+      >
+        ×
+      </button>
+      <span class="popup-count" data-popup-count>1 / 3</span>
+      <div class="popup-track" data-popup-track>
+        <a class="popup-slide" href="#" draggable="false"
+          ><img
+            src="assets/images/simmons/popup-experience.png"
+            alt="시몬스 온라인 체험존 안내"
+        /></a>
+        <a class="popup-slide" href="#" draggable="false"
+          ><img
+            src="assets/images/simmons/popup-second.png"
+            alt="시몬스 슬립 라운지 안내"
+        /></a>
+        <a class="popup-slide" href="#" draggable="false"
+          ><img
+            src="assets/images/simmons/popup-third.png"
+            alt="시몬스 프로모션 안내"
+        /></a>
+      </div>
+      <div class="popup-dots" aria-hidden="true">
+        <i class="is-active"></i><i></i><i></i>
+      </div>
+    </aside>
+    <nav class="quick-menu" aria-label="빠른 상담 메뉴">
+      <button
+        class="quick-button kakao"
+        type="button"
+        data-quick="kakao"
+        aria-label="카카오톡 상담"
+      >
+        <img src="assets/images/simmons/quick-kakao.png" alt="" />
+      </button>
+      <div class="quick-tooltip is-visible" data-quick-tooltip>
+        안녕하세요. 시몬스입니다.<br />데모 화면에서는 상담 버튼이 연결되지
+        않습니다.
+      </div>
+      <button
+        class="quick-button chatbot"
+        type="button"
+        data-quick="chatbot"
+        aria-label="챗봇 상담"
+      >
+        <img src="assets/images/simmons/quick-chatbot.png" alt="" />
+      </button>
+    </nav>
+    <button
+      class="quick-button top"
+      type="button"
+      data-scroll-top
+      aria-label="맨 위로 이동"
+    >
+      ↑
+    </button>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+      <div class="footer-top">
+        <a class="brand" href="#">SIMMONS</a>
+        <p>흔들리지 않는 편안함.<br />당신의 더 나은 밤을 위해.</p>
+      </div>
+      <div class="footer-grid">
+        <div>
+          <strong>SHOP</strong>
+          <a href="#">매트리스</a>
+          <a href="#">침대 프레임</a>
+          <a href="#">침구</a>
         </div>
-        <div class="footer-v10-col">
-          <b>Partnership</b>
-          <a href="#">Business solutions</a>
-          <a href="#">Find a retailer</a>
-          <a href="#">Authorized dealers</a>
-          <a href="#">Marshall Records</a>
+        <div>
+          <strong>ABOUT</strong>
+          <a href="#">Why Simmons</a>
+          <a href="#">브랜드 스토리</a>
+          <a href="#">매장 찾기</a>
         </div>
-        <div class="footer-v10-col">
-          <b>Support</b>
-          <a href="#">Customer support</a>
-          <a href="#">Amps support</a>
-          <a href="#">Speaker support</a>
-          <a href="#">Headphones support</a>
-          <a href="#">Shipping &amp; returns</a>
-          <a href="#">Warranty &amp; repair</a>
+        <div>
+          <strong>SUPPORT</strong>
+          <a href="#">고객센터</a>
+          <a href="#">배송 안내</a>
+          <a href="#">A/S 안내</a>
         </div>
-        <div class="footer-v10-meta">
-          <div aria-label="Social media" class="footer-social">
-            <a aria-label="Instagram" href="#">IG</a>
-            <a aria-label="Facebook" href="#">FB</a>
-            <a aria-label="YouTube" href="#">YT</a>
-          </div>
-          <a class="footer-region" href="#">◎   South Korea / 한국어</a>
-          <a class="footer-family" href="#">GLOBAL SITE <span>↗</span></a>
+        <div class="newsletter">
+          <strong>STAY IN THE KNOW</strong>
+          <p>시몬스의 새로운 소식을 받아보세요.</p>
+          <form>
+            <label class="sr-only" for="email">이메일</label
+            ><input
+              id="email"
+              type="email"
+              autocomplete="email"
+              placeholder="Email address"
+            /><button type="submit" aria-label="뉴스레터 신청">→</button>
+          </form>
         </div>
       </div>
-      <div class="footer-v10-bottom shell">
-        <div class="footer-legal">
-          <a href="#">Terms</a><a href="#">Privacy</a><a href="#">Cookies</a
-          ><a href="#">Accessibility</a><a href="#">Modern Slavery Statement</a>
+      <div class="footer-bottom">
+        <p>© SIMMONS KOREA. PORTFOLIO RENEWAL.</p>
+        <div>
+          <a href="#">Instagram</a>
+          <a href="#">YouTube</a>
+          <a href="#">개인정보처리방침</a>
         </div>
-        <p>© 2026 Marshall Group AB · Unofficial portfolio concept renewal.</p>
       </div>
     </footer>
-    <script defer src="assets/js/main.js"></script>
-    <script defer src="assets/js/editorial.js"></script>
-    <script defer src="assets/js/feature-focus.js"></script>
   </body>
 </html>
